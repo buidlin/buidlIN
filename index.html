@@ -1,402 +1,254 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en"> 
 <head>
+    <title>BuidlIn - A Rustic developer hub for buidlin Web 3</title>
+    
+    <!-- Meta -->
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>BuidlIn</title>
-    <link href="https://fonts.googleapis.com/css?family=Lato:400,400i|PT+Serif:700" rel="stylesheet">
-    <link rel="stylesheet" href="dist/css/style.css">
-    <script src="https://unpkg.com/scrollreveal@4.0.0/dist/scrollreveal.min.js"></script>
-</head>
-<body class="is-boxed has-animations">
-    <div class="body-wrap boxed-container">
-        <header class="site-header">
-            <div class="container">
-                <div class="site-header-inner">
-                    <div class="brand header-brand">
-                        <h1 class="m-0">
-                            <a href="#">
-                                <svg width="32" height="32" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
-                                    <title>BuidlIn</title>
-                                    <defs>
-                                        <radialGradient cy="0%" fx="50%" fy="0%" r="100%" id="logo-gradient">
-                                            <stop stop-color="#FFF" offset="0%"/>
-                                            <stop stop-color="#FFF" stop-opacity=".24" offset="100%"/>
-                                        </radialGradient>
-                                    </defs>
-                                    <path d="M16 32C7.163 32 0 24.837 0 16S7.163 0 16 0s16 7.163 16 16-7.163 16-16 16zm0-10a6 6 0 1 0 0-12 6 6 0 0 0 0 12z" fill="url(#logo-gradient)" fill-rule="evenodd"/>
-                                </svg>
-                            </a>
-                        </h1>
-                    </div>
-                    <ul class="header-links list-reset m-0">
-                        <!-- <li>
-                            <a href="#">Login</a>
-                        </li>
-                        <li>
-                            <a class="button button-sm button-shadow" href="#">Signup</a>
-                        </li> -->
-                    </ul>
-                </div>
-            </div>
-        </header>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Bootstrap Documentation Template For Software Developers">
+    <meta name="author" content="Xiaoying Riley at 3rd Wave Media">    
+    <link rel="shortcut icon" href="favicon.ico"> 
+    
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700&display=swap" rel="stylesheet">
+    
+    <!-- FontAwesome JS-->
+    <script defer src="assets/fontawesome/js/all.min.js"></script>
 
-        <main>
-            <section class="hero text-light text-center">
-                <div class="container-sm">
-                    <div class="hero-inner">
-                        <h1 class="hero-title h2-mobile mt-0 is-revealing">Building Distributed Ledger</h1>
-                        <p class="hero-paragraph is-revealing">We are focused on decentralized crypto finance, privacy, and data engineering of the public blockchain ecosystem.</p>
-                        <p class="hero-cta is-revealing"><a class="button button-secondary button-shadow" href="#">Buidl.in</a></p>
-                       <!--  <div class="hero-media">
-                        </div> -->
-                        <br>
-                        <br>
-                        <br>
-                        <br>
-                    </div>
-                </div>
-            </section>
+    <!-- Theme CSS -->  
+    <link id="theme-style" rel="stylesheet" href="assets/css/theme.css">
 
-            <!-- <section class="clients section">
-                <div class="container">
-                    <div class="clients-inner section-inner has-top-divider">
-                        <div class="container-sm">
-                            <ul class="list-reset mb-0">
-                                <li>
-                                    <span class="screen-reader-text">Ethereum</span>
-                                    <svg width="132" height="40" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M.48 41.186L41.085 85.52a35.197 35.197 0 0 1-1.553-3.464c-1.55-4.028-2.325-8.302-2.325-12.816 0-4.517.775-8.79 2.325-12.817 1.553-4.03 3.702-7.526 6.452-10.494 2.749-2.965 6.052-5.31 9.909-7.038 3.858-1.726 8.091-2.59 12.701-2.59 4.612 0 8.868.886 12.768 2.658 1.45.657 2.823 1.4 4.118 2.227zm-3.917 58.667c-3.858 1.727-8.092 2.59-12.702 2.59-4.611 0-8.868-.886-12.77-2.656a32.757 32.757 0 0 1-4.114-2.231l44.394-44.33a34.792 34.792 0 0 1 1.552 3.462c1.55 4.028 2.326 8.302 2.326 12.817 0 4.516-.775 8.788-2.326 12.818-1.552 4.028-3.702 7.524-6.451 10.49-2.75 2.965-6.051 5.313-9.91 7.04zm6.717 13.746c5.941-2.568 11.084-6.043 15.428-10.427 4.345-4.382 7.713-9.496 10.107-15.34 2.396-5.842 3.593-12.04 3.593-18.592 0-6.553-1.197-12.751-3.593-18.596a48.324 48.324 0 0 0-5.242-9.603l28.875-28.834L125.974.75 97.011 29.671a49.05 49.05 0 0 0-8.466-4.592c-5.941-2.523-12.502-3.787-19.684-3.787-7.183 0-13.744 1.285-19.685 3.853-5.942 2.568-11.085 6.042-15.43 10.425-4.344 4.383-7.714 9.497-10.107 15.34-2.394 5.844-3.591 12.042-3.591 18.595 0 6.552 1.197 12.748 3.59 18.593a48.45 48.45 0 0 0 5.244 9.607L.01 126.535l11.474 11.457 28.961-28.92a49.05 49.05 0 0 0 8.466 4.593c5.942 2.523 12.503 3.784 19.684 3.784 7.183 0 13.744-1.284 19.686-3.85z" fill="#93A2B3" fill-rule="nonzero"/>
-                                    </svg>
-                                </li>
-                                <li>
-                                    <span class="screen-reader-text">Instagram</span>
-                                    <svg width="132" height="40" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M40.405 20.317c0-3.065-2.053-4.807-4.96-4.807h-1.779v9.617h1.729c2.703 0 5.01-1.455 5.01-4.81zm31.646 3.46L58.945 34l-11.978-9.342c-1.729 4.113-5.905 6.97-10.715 6.97H26V9.006h10.252c5.374 0 9.247 3.386 10.711 6.993l11.982-9.332 4.438 3.46-10.981 8.55 2.11 1.635 10.978-8.544 4.444 3.45-10.98 8.559 2.108 1.64 10.99-8.561v-7.85h7.966v16.02h7.947v6.63H72.05v-7.879zm26.005 1.251H106v6.628H90.082V9.006h7.974v16.022z" fill="#93A2B3" fill-rule="nonzero"/>
-                                    </svg>
-                                </li>
-                                <li>
-                                    <span class="screen-reader-text">Unilever</span>
-                                    <svg width="132" height="40" xmlns="http://www.w3.org/2000/svg">
-                                        <g fill="#93A2B3" fill-rule="nonzero">
-                                            <path d="M30.252 63.441c-4.55 0-7.864-1.089-9.946-3.267-2.08-2.177-3.121-4.525-3.121-7.041 0-.92.181-1.694.544-2.323a3.993 3.993 0 0 1 1.489-1.489c.629-.363 1.403-.544 2.323-.544.92 0 1.693.181 2.323.544.629.363 1.125.86 1.488 1.489.363.629.544 1.403.544 2.323 0 1.113-.266 2.02-.798 2.722-.533.702-1.162 1.161-1.888 1.38.63.87 1.622 1.487 2.977 1.85 1.355.388 2.71.581 4.065.581 1.887 0 3.593-.508 5.118-1.524 1.524-1.017 2.65-2.517 3.376-4.501.726-1.984 1.089-4.235 1.089-6.752 0-2.734-.4-5.07-1.198-7.005-.775-1.96-1.924-3.412-3.449-4.356a9.21 9.21 0 0 0-4.936-1.415c-1.162 0-2.613.484-4.356 1.452l-3.194 1.597v-1.597L37.076 16.4H17.185v19.89c0 1.646.363 3.001 1.089 4.066s1.839 1.597 3.34 1.597c1.16 0 2.274-.387 3.339-1.162a11.803 11.803 0 0 0 2.758-2.83c.097-.219.218-.376.363-.473a.723.723 0 0 1 .472-.181c.266 0 .58.133.944.4.339.386.508.834.508 1.342a9.243 9.243 0 0 1-.182 1.017c-.822 1.839-1.96 3.242-3.412 4.21a8.457 8.457 0 0 1-4.79 1.452c-4.308 0-7.285-.847-8.93-2.54-1.645-1.695-2.468-3.994-2.468-6.897V16.4H.052v-3.703h10.164v-8.42L7.893 1.952V.066h6.751l2.54 1.306v11.325l26.28-.072 2.614 2.613-16.116 16.116a10.807 10.807 0 0 1 3.049-.726c1.742 0 3.702.557 5.88 1.67 2.202 1.089 3.896 2.59 5.081 4.5 1.186 1.888 1.948 3.703 2.287 5.445.363 1.743.545 3.291.545 4.646 0 3.098-.654 5.977-1.96 8.64-1.307 2.661-3.291 4.645-5.953 5.952-2.662 1.307-5.542 1.96-8.639 1.96z"/>
-                                        </g>
-                                    </svg>
-                                </li>
-                                <li>
-                                    <span class="screen-reader-text">Uber</span>
-                                    <svg width="132" height="40" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M31.045 9h4.038v12.86c0 6.765-4.306 9.14-10.553 9.14C18.306 31 14 28.625 14 21.86V9.514c0-.358.178-.515.535-.515h4.039v12.658c0 4.055 1.784 5.735 5.956 5.735 4.195 0 5.98-1.68 5.98-5.735V9.515c0-.358.178-.515.535-.515zm45.714 3.517v5.422h10.218c.178 0 .245.09.178.269l-1.115 2.778c-.112.246-.268.358-.602.358h-6.002c-1.963 0-2.677.605-2.677 1.927v3.83H90.59c.179 0 .246.09.179.27l-1.16 2.89c-.112.246-.268.358-.603.358H73.86c-1.16 0-1.607-.403-1.607-1.277V10.501c0-1.053.58-1.501 2.097-1.501h16.242c.179 0 .246.09.179.246l-1.16 2.913c-.112.246-.268.358-.603.358H76.76zM63.93 24.637c0 4.324-3.034 5.982-7.295 5.982H45.346c-1.182 0-1.606-.403-1.606-1.277V10.501c0-1.053.557-1.501 2.097-1.501h9.17c4.015 0 7.897.695 7.897 5.489 0 2.06-.736 3.808-2.499 4.727 2.432.65 3.525 2.845 3.525 5.421zm-15.75-6.63h7.161c2.365 0 3.034-.92 3.034-2.801 0-1.882-.67-2.778-3.034-2.778h-7.162v5.578zM59.4 24.233c0-1.994-.691-2.98-3.235-2.98H50.88c-1.963 0-2.7.605-2.7 1.927v4.01h7.987c2.544 0 3.235-.985 3.235-2.957zm59.346 6.385h-4.105c-.335 0-.469-.134-.603-.358l-4.35-7.886h-3.994c-1.963 0-2.7.605-2.7 1.926v6.318H99.07c-.357 0-.535-.18-.535-.515V10.5c0-1.053.58-1.501 2.097-1.501h9.214c5.377 0 8.612 1.411 8.612 6.654 0 4.055-1.941 5.645-4.35 6.273l4.84 8.311c.09.135.09.381-.2.381zm-4.82-14.876c0-2.195-.602-3.27-3.413-3.27h-7.518v6.541h7.518c2.811 0 3.414-1.053 3.414-3.27z" fill="#93A2B3" fill-rule="nonzero"/>
-                                    </svg>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </section>
- -->
-            <!-- <section class="features section text-center">
-                <div class="container">
-                    <div class="features-inner section-inner has-top-divider">
-                        <h2 class="section-title mt-0">Product features</h2>
-                        <div class="features-wrap">
-                            <div class="feature is-revealing">
-                                <div class="feature-inner">
-                                    <div class="feature-icon">
-                                        <svg width="48" height="48" xmlns="http://www.w3.org/2000/svg">
-                                            <g fill="none" fill-rule="evenodd">
-                                                <path fill="#84E482" d="M48 16v32H16z"/>
-                                                <path fill="#0EB3CE" d="M0 0h32v32H0z"/>
-                                            </g>
-                                        </svg>
-                                    </div>
-                                    <h4 class="feature-title h3-mobile">Lorem Ipsum</h4>
-                                    <p class="text-sm">often arouses curiosity due to its resemblance to classical latin</p>
-                                </div>
-                            </div>
-                            <div class="feature is-revealing">
-                                <div class="feature-inner">
-                                    <div class="feature-icon">
-                                        <svg width="48" height="48" xmlns="http://www.w3.org/2000/svg">
-                                            <g fill="none" fill-rule="evenodd">
-                                                <path fill="#84E482" d="M48 16v32H16z"/>
-                                                <path fill="#0EB3CE" d="M0 0v32h32z"/>
-                                                <circle fill="#02C6A4" cx="29" cy="9" r="4"/>
-                                            </g>
-                                        </svg>
-                                    </div>
-                                    <h4 class="feature-title h3-mobile">Lorem Ipsum</h4>
-                                    <p class="text-sm">often arouses curiosity due to its resemblance to classical latin</p>
-                                </div>
-                            </div>
-                            <div class="feature is-revealing">
-                                <div class="feature-inner">
-                                    <div class="feature-icon">
-                                        <svg width="48" height="48" xmlns="http://www.w3.org/2000/svg">
-                                            <g fill="none" fill-rule="evenodd">
-                                                <path fill="#0EB3CE" d="M0 0h32v32H0z"/>
-                                                <path fill="#84E482" d="M16 16h32L16 48z"/>
-                                            </g>
-                                        </svg>
-                                    </div>
-                                    <h4 class="feature-title h3-mobile">Lorem Ipsum</h4>
-                                    <p class="text-sm">often arouses curiosity due to its resemblance to classical latin</p>
-                                </div>
-                            </div>
-                            <div class="feature is-revealing">
-                                <div class="feature-inner">
-                                    <div class="feature-icon">
-                                        <svg width="48" height="48" xmlns="http://www.w3.org/2000/svg">
-                                            <g fill="none" fill-rule="evenodd">
-                                                <path d="M32 40H0c0-8.837 7.163-16 16-16s16 7.163 16 16z" fill="#84E482" style="mix-blend-mode:multiply"/>
-                                                <path fill="#03C5A4" d="M12 8h8v8h-8z"/>
-                                                <path fill="#0EB3CE" d="M32 0h16v48H32z"/>
-                                            </g>
-                                        </svg>
-                                    </div>
-                                    <h4 class="feature-title h3-mobile">Lorem Ipsum</h4>
-                                    <p class="text-sm">often arouses curiosity due to its resemblance to classical latin</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section> -->
+</head> 
 
-            <section class="features-extended section">
-                <div class="container">
-                    <div class="features-extended-inner section-inner has-top-divider">
-                        <div class="features-extended-header text-center">
-                            <div class="container-sm">
-                                <h2 class="section-title mt-0">What we do ?</h2>
-                                <p class="section-paragraph">We works with multiple platform like Ethereum, Polkadot, Cosmos, Tezos etc</p>
-                            </div>
-                        </div>
-                        <div class="feature-extended">
-                            <div class="feature-extended-image is-revealing">
-                                <svg width="480" height="360" viewBox="0 0 480 360" xmlns="http://www.w3.org/2000/svg">
-                                    <defs>
-                                        <filter x="-500%" y="-500%" width="1000%" height="1000%" filterUnits="objectBoundingBox" id="dropshadow-1">
-                                            <feOffset dy="16" in="SourceAlpha" result="shadowOffsetOuter"/>
-                                            <feGaussianBlur stdDeviation="24" in="shadowOffsetOuter" result="shadowBlurOuter"/>
-                                            <feColorMatrix values="0 0 0 0 0.12 0 0 0 0 0.17 0 0 0 0 0.21 0 0 0 0.2 0" in="shadowBlurOuter"/>
-                                        </filter>
-                                    </defs>
-                                    <path fill="#F6F8FA" d="M0 220V0h200zM480 140v220H280z"/>
-                                    <path fill="#FFF" d="M40 50h400v260H40z" style="mix-blend-mode:multiply;filter:url(#dropshadow-1)"/>
-                                    <path fill="#FFF" d="M40 50h400v260H40z"/>
-                                    <path fill="#FFF" d="M103 176h80v160h-80zM320 24h88v88h-88z" style="mix-blend-mode:multiply;filter:url(#dropshadow-1)"/>
-                                    <path fill="#FFF" d="M103 176h80v160h-80zM320 24h88v88h-88z"/>
-                                    <path fill="#FFF" d="M230.97 198l16.971 16.971-16.97 16.97L214 214.972z" style="mix-blend-mode:multiply;filter:url(#dropshadow-1)"/>
-                                    <path fill="#02C6A4" d="M230.97 198l16.971 16.971-16.97 16.97L214 214.972z"/>
-                                    <path fill="#FFF" d="M203 121H103v100z" style="mix-blend-mode:multiply;filter:url(#dropshadow-1)"/>
-                                    <path fill="#84E482" d="M203 121H103v100z"/>
-                                    <circle fill="#FFF" cx="288" cy="166" r="32" style="mix-blend-mode:multiply;filter:url(#dropshadow-1)"/>
-                                    <circle fill="#0EB3CE" cx="288" cy="166" r="32" style="mix-blend-mode:multiply"/>
-                                </svg>
-                            </div>
-                            <div class="feature-extended-body">
-                                <h3 class="mt-0">Validator</h3>
-                                <p>We provide infrastructure for validator of next-generation cryptocurrency technologies which are designed on Proof of Stake.</p>
-                            </div>
-                        </div>
-                        <div class="feature-extended">
-                            <div class="feature-extended-image is-revealing">
-                                <svg width="480" height="360" viewBox="0 0 480 360" xmlns="http://www.w3.org/2000/svg">
-                                    <defs>
-                                        <filter x="-500%" y="-500%" width="1000%" height="1000%" filterUnits="objectBoundingBox" id="dropshadow-2">
-                                            <feOffset dy="16" in="SourceAlpha" result="shadowOffsetOuter"/>
-                                            <feGaussianBlur stdDeviation="24" in="shadowOffsetOuter" result="shadowBlurOuter"/>
-                                            <feColorMatrix values="0 0 0 0 0.12 0 0 0 0 0.17 0 0 0 0 0.21 0 0 0 0.2 0" in="shadowBlurOuter"/>
-                                        </filter>
-                                    </defs>
-                                    <path fill="#F6F8FA" d="M480 140v220H280zM0 220V0h200z"/>
-                                    <path fill="#FFF" d="M40 50h400v260H40z" style="mix-blend-mode:multiply;filter:url(#dropshadow-2)"/>
-                                    <path fill="#FFF" d="M40 50h400v260H40z"/>
-                                    <path fill="#FFF" d="M86.225 161l62.226 62.225-62.226 62.225L24 223.225zM296 176h80v160h-80z" style="mix-blend-mode:multiply;filter:url(#dropshadow-2)"/>
-                                    <path fill="#FFF" d="M86.225 161l62.226 62.225-62.226 62.225L24 223.225zM296 176h80v160h-80z"/>
-                                    <path fill="#FFF" d="M245.092 218l9.378 22.092-22.093 9.378L223 227.378z" style="mix-blend-mode:multiply;filter:url(#dropshadow-2)"/>
-                                    <path fill="#02C6A4" d="M245.092 218l9.378 22.092-22.093 9.378L223 227.378z"/>
-                                    <path fill="#FFF" d="M270 96H170v100z" style="mix-blend-mode:multiply;filter:url(#dropshadow-2)"/>
-                                    <path fill="#84E482" d="M270 96H170v100z"/>
-                                    <circle fill="#FFF" cx="296" cy="177" r="32" style="mix-blend-mode:multiply;filter:url(#dropshadow-2)"/>
-                                    <circle fill="#0EB3CE" cx="296" cy="177" r="32" style="mix-blend-mode:multiply"/>
-                                </svg>
-                            </div>
-                            <div class="feature-extended-body">
-                                <h3 class="mt-0">Buidl</h3>
-                                <p>From building a decentralized financial platform to bringing privacy on the ongoing product. We are super specialized in working with multi-vertical of the decentralized ledger.</p>
-                            </div>
-                        </div>
-                        <div class="feature-extended">
-                            <div class="feature-extended-image is-revealing">
-                                <svg width="480" height="360" viewBox="0 0 480 360" xmlns="http://www.w3.org/2000/svg">
-                                    <defs>
-                                        <filter x="-500%" y="-500%" width="1000%" height="1000%" filterUnits="objectBoundingBox" id="dropshadow-3">
-                                            <feOffset dy="16" in="SourceAlpha" result="shadowOffsetOuter"/>
-                                            <feGaussianBlur stdDeviation="24" in="shadowOffsetOuter" result="shadowBlurOuter"/>
-                                            <feColorMatrix values="0 0 0 0 0.12 0 0 0 0 0.17 0 0 0 0 0.21 0 0 0 0.2 0" in="shadowBlurOuter"/>
-                                        </filter>
-                                    </defs>
-                                    <path fill="#F6F8FA" d="M480 140v220H280zM0 220V0h200z"/>
-                                    <path fill="#FFF" d="M40 50h400v260H40z" style="mix-blend-mode:multiply;filter:url(#dropshadow-3)"/>
-                                    <path fill="#FFF" d="M40 50h400v260H40z"/>
-                                    <path fill="#FFF" d="M72 248h88v88H72zM180 24h80v160h-80z" style="mix-blend-mode:multiply;filter:url(#dropshadow-3)"/>
-                                    <path fill="#FFF" d="M72 248h88v88H72zM180 24h80v160h-80z"/>
-                                    <path fill="#FFF" d="M277.664 261.919l-18.113 15.745-15.746-18.113 18.113-15.745z" style="mix-blend-mode:multiply;filter:url(#dropshadow-3)"/>
-                                    <path fill="#02C6A4" d="M277.664 261.919l-18.113 15.745-15.746-18.113 18.113-15.745z"/>
-                                    <path fill="#FFF" d="M315 129H215v100z" style="mix-blend-mode:multiply;filter:url(#dropshadow-3)"/>
-                                    <path fill="#84E482" d="M315 129H215v100z"/>
-                                    <circle fill="#FFF" cx="318" cy="219" r="32" style="mix-blend-mode:multiply;filter:url(#dropshadow-3)"/>
-                                    <circle fill="#0EB3CE" cx="318" cy="219" r="32" style="mix-blend-mode:multiply"/>
-                                </svg>
-                            </div>
-                            <div class="feature-extended-body">
-                                <h3 class="mt-0">Analysis</h3>
-                                <p>We are having a good amount of experience in building tool with apache, Kafka, big query, elastic search around public blockchain infrastructure data</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
+<body>    
+    <header class="header fixed-top">	    
+        <div class="branding docs-branding">
+            <div class="container-fluid position-relative py-2">
+                <div class="docs-logo-wrapper">
+	                <div class="site-logo"><a class="navbar-brand" href="index.html"><img class="logo-icon mr-2" src="assets/images/coderdocs-logo.svg" alt="logo"><span class="logo-text">Buidlin<span class="text-alt"></span></span></a></div>    
+                </div><!--//docs-logo-wrapper-->
+	            <div class="docs-top-utilities d-flex justify-content-end align-items-center">
+	
+					<ul class="social-list list-inline mx-md-3 mx-lg-5 mb-0 d-none d-lg-flex">
+						<li class="list-inline-item"><a href="https://github.com/buidlin"><i class="fab fa-github fa-fw"></i></a></li>
+			            <li class="list-inline-item"><a href="https://twitter.com/buidlin"><i class="fab fa-twitter fa-fw"></i></a></li>
+		                <!-- <li class="list-inline-item"><a href="#"><i class="fab fa-discord fa-fw"></i></a></li> -->
+		            </ul><!--//social-list-->
+		            
+	            </div><!--//docs-top-utilities-->
+            </div><!--//container-->
+        </div><!--//branding-->
+    </header><!--//header-->
+    
+    
+    <div class="page-header theme-bg-dark py-5 text-center position-relative">
+	    <div class="theme-bg-shapes-right"></div>
+	    <div class="theme-bg-shapes-left"></div>
+	    <div class="container">
+		    <h1 class="page-heading single-col-max mx-auto">Rustic hub for Web3 developers</h1>
+		    <div class="page-intro single-col-max mx-auto">Rustic super knowledge hub is to provides developer baseline knowledge for Rust buidl community around Web3 ecosystem.</div>
+		    <div class="main-search-box pt-3 d-block mx-auto">
+                 <form class="search-form w-100">
+		            <input type="text" placeholder="Search the docs..." name="search" class="form-control search-input">
+		            <button type="submit" class="btn search-btn" value="Search"><i class="fas fa-search"></i></button>
+		        </form>
+             </div>
+	    </div>
+    </div><!--//page-header-->
+    <div class="page-content">
+	    <div class="container">
+		    <div class="docs-overview py-5">
+			    <div class="row justify-content-center">
+				    <div class="col-12 col-lg-4 py-3">
+					    <div class="card shadow-sm">
+						    <div class="card-body">
+							    <h5 class="card-title mb-3">
+								    <span class="theme-icon-holder card-icon-holder mr-2">
+								        <i class="fas fa-map-signs"></i>
+							        </span><!--//card-icon-holder-->
+							        <span class="card-title-text">Vision</span>
+							    </h5>
+							    <div class="card-text">
+								    Section overview goes here. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.
+							    </div>
+							    <a class="card-link-mask" href="docs-page.html#section-1"></a>
+						    </div><!--//card-body-->
+					    </div><!--//card-->
+				    </div><!--//col-->
+				    <div class="col-12 col-lg-4 py-3">
+					    <div class="card shadow-sm">
+						    <div class="card-body">
+							    <h5 class="card-title mb-3">
+								    <span class="theme-icon-holder card-icon-holder mr-2">
+								        <i class="fas fa-arrow-down"></i>
+							        </span><!--//card-icon-holder-->
+							        <span class="card-title-text">Why Rust</span>
+							    </h5>
+							    <div class="card-text">
+								    Section overview goes here. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo.
+							    </div>
+							    <a class="card-link-mask" href="docs-page.html#section-2"></a>
+						    </div><!--//card-body-->
+					    </div><!--//card-->
+				    </div><!--//col-->
+				    <div class="col-12 col-lg-4 py-3">
+					    <div class="card shadow-sm">
+						    <div class="card-body">
+							    <h5 class="card-title mb-3">
+								    <span class="theme-icon-holder card-icon-holder mr-2">
+								        <i class="fas fa-box fa-fw"></i>
+							        </span><!--//card-icon-holder-->
+							        <span class="card-title-text">Rust Best Practice</span>
+							    </h5>
+							    <div class="card-text">
+								    Section overview goes here. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet.						    
+								</div>
+							    <a class="card-link-mask" href="docs-page.html#section-3"></a>
+						    </div><!--//card-body-->
+					    </div><!--//card-->
+				    </div><!--//col-->
+				    <div class="col-12 col-lg-4 py-3">
+					    <div class="card shadow-sm">
+						    <div class="card-body">
+							    <h5 class="card-title mb-3">
+								    <span class="theme-icon-holder card-icon-holder mr-2">
+								        <i class="fas fa-cogs fa-fw"></i>
+							        </span><!--//card-icon-holder-->
+							        <span class="card-title-text">Security tools</span>
+							    </h5>
+							    <div class="card-text">
+								    Section overview goes here. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet.						    
+								</div>
+							    <a class="card-link-mask" href="docs-page.html#section-4"></a>
+						    </div><!--//card-body-->
+					    </div><!--//card-->
+				    </div><!--//col-->
+				    <div class="col-12 col-lg-4 py-3">
+					    <div class="card shadow-sm">
+						    <div class="card-body">
+							    <h5 class="card-title mb-3">
+								    <span class="theme-icon-holder card-icon-holder mr-2">
+								        <i class="fas fa-tools"></i>
+							        </span><!--//card-icon-holder-->
+							        <span class="card-title-text">Known attacks</span>
+							    </h5>
+							    <div class="card-text">
+								    Section overview goes here. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet.						    
+								</div>
+							    <a class="card-link-mask" href="docs-page.html#section-5"></a>
+						    </div><!--//card-body-->
+					    </div><!--//card-->
+				    </div><!--//col-->
+				    <div class="col-12 col-lg-4 py-3">
+					    <div class="card shadow-sm">
+						    <div class="card-body">
+							    <h5 class="card-title mb-3">
+								    <span class="theme-icon-holder card-icon-holder mr-2">
+								        <i class="fas fa-laptop-code"></i>
+							        </span><!--//card-icon-holder-->
+							        <span class="card-title-text">Glossary</span>
+							    </h5>
+							    <div class="card-text">
+								    Section overview goes here. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet.						    
+								</div>
+							    <a class="card-link-mask" href="docs-page.html#section-6"></a>
+						    </div><!--//card-body-->
+					    </div><!--//card-->
+				    </div><!--//col-->
+				    <div class="col-12 col-lg-4 py-3">
+					    <div class="card shadow-sm">
+						    <div class="card-body">
+							    <h5 class="card-title mb-3">
+								    <span class="theme-icon-holder card-icon-holder mr-2">
+								        <i class="fas fa-tablet-alt"></i>
+							        </span><!--//card-icon-holder-->
+							        <span class="card-title-text">Protocols on Rust</span>
+							    </h5>
+							    <div class="card-text">
+								    Section overview goes here. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet.						    
+								</div>
+							    <a class="card-link-mask" href="docs-page.html#section-7"></a>
+						    </div><!--//card-body-->
+					    </div><!--//card-->
+				    </div><!--//col-->
+				    <div class="col-12 col-lg-4 py-3">
+					    <div class="card shadow-sm">
+						    <div class="card-body">
+							    <h5 class="card-title mb-3">
+								    <span class="theme-icon-holder card-icon-holder mr-2">
+								        <i class="fas fa-book-reader"></i>
+							        </span><!--//card-icon-holder-->
+							        <span class="card-title-text">Projects on Rust</span>
+							    </h5>
+							    <div class="card-text">
+								    Section overview goes here. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet.						    
+								</div>
+							    <a class="card-link-mask" href="docs-page.html#section-8"></a>
+						    </div><!--//card-body-->
+					    </div><!--//card-->
+				    </div><!--//col-->
+				    <div class="col-12 col-lg-4 py-3">
+					    <div class="card shadow-sm">
+						    <div class="card-body">
+							    <h5 class="card-title mb-3">
+								    <span class="theme-icon-holder card-icon-holder mr-2">
+								        <i class="fas fa-lightbulb"></i>
+							        </span><!--//card-icon-holder-->
+							        <span class="card-title-text">FAQs</span>
+							    </h5>
+							    <div class="card-text">
+								    Section overview goes here. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet.						    
+								</div>
+							    <a class="card-link-mask" href="docs-page.html#section-9"></a>
+						    </div><!--//card-body-->
+					    </div><!--//card-->
+				    </div><!--//col-->
+			    </div><!--//row-->
+		    </div><!--//container-->
+		</div><!--//container-->
+    </div><!--//page-content-->
 
-            <section class="pricing section">
-                <div class="container">
-                    <div class="pricing-inner section-inner has-top-divider">
-                        <h2 class="section-title mt-0 text-center">Contact Us</h2>
-                        <!-- <div class="pricing-tables-wrap">
-                            <div class="pricing-table is-revealing">
-                                <div class="pricing-table-inner">
-                                    <div class="pricing-table-main">
-                                        <div class="pricing-table-header">
-                                            <div class="pricing-table-title mt-12 mb-16 text-secondary">Lorem ipsum</div>
-                                            <div class="pricing-table-price mb-24 pb-32"><span class="pricing-table-price-currency h3">$</span><span class="pricing-table-price-amount h1">29</span></div>
-                                        </div>
-                                        <ul class="pricing-table-features list-reset text-xs mb-56">
-                                            <li>
-                                                <span class="list-icon">
-                                                    <svg width="16" height="12" xmlns="http://www.w3.org/2000/svg">
-                                                        <path d="M14.3.3L5 9.6 1.7 6.3c-.4-.4-1-.4-1.4 0-.4.4-.4 1 0 1.4l4 4c.2.2.4.3.7.3.3 0 .5-.1.7-.3l10-10c.4-.4.4-1 0-1.4-.4-.4-1-.4-1.4 0z" fill="#00C6A7" fill-rule="nonzero"/>
-                                                    </svg>
-                                                </span>
-                                                <span>Sed do eiusmod tempor cesa.</span>
-                                            </li>
-                                            <li>
-                                                <span class="list-icon">
-                                                    <svg width="16" height="12" xmlns="http://www.w3.org/2000/svg">
-                                                        <path d="M14.3.3L5 9.6 1.7 6.3c-.4-.4-1-.4-1.4 0-.4.4-.4 1 0 1.4l4 4c.2.2.4.3.7.3.3 0 .5-.1.7-.3l10-10c.4-.4.4-1 0-1.4-.4-.4-1-.4-1.4 0z" fill="#00C6A7" fill-rule="nonzero"/>
-                                                    </svg>
-                                                </span>
-                                                <span>Sed do eiusmod tempor cesa.</span>
-                                            </li>
-                                            <li>
-                                                <span class="list-icon">
-                                                    <svg width="16" height="12" xmlns="http://www.w3.org/2000/svg">
-                                                        <path d="M14.3.3L5 9.6 1.7 6.3c-.4-.4-1-.4-1.4 0-.4.4-.4 1 0 1.4l4 4c.2.2.4.3.7.3.3 0 .5-.1.7-.3l10-10c.4-.4.4-1 0-1.4-.4-.4-1-.4-1.4 0z" fill="#00C6A7" fill-rule="nonzero"/>
-                                                    </svg>
-                                                </span>
-                                                <span>Sed do eiusmod tempor cesa.</span>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                    <div class="pricing-table-cta">
-                                        <a class="button button-secondary button-block" href="#">Get started now</a>
-                                    </div>
-                                </div>
-                            </div> -->
-                            <div class="pricing-table is-revealing">
-                                <div class="pricing-table-inner">
-                                    <div class="pricing-table-main">
-                                        
-                                        <ul class="pricing-table-features list-reset text-xs mb-56">
-                                            <li>
-                                                <span class="list-icon">
-                                                    <svg width="16" height="12" xmlns="http://www.w3.org/2000/svg">
-                                                        <path d="M14.3.3L5 9.6 1.7 6.3c-.4-.4-1-.4-1.4 0-.4.4-.4 1 0 1.4l4 4c.2.2.4.3.7.3.3 0 .5-.1.7-.3l10-10c.4-.4.4-1 0-1.4-.4-.4-1-.4-1.4 0z" fill="#00A2B8" fill-rule="nonzero"/>
-                                                    </svg>
-                                                </span>
-                                                <span>buidlinchain@gmail.com</span>
-                                            </li>
-                                            <li>
-                                                <span class="list-icon">
-                                                    <svg width="16" height="12" xmlns="http://www.w3.org/2000/svg">
-                                                        <path d="M14.3.3L5 9.6 1.7 6.3c-.4-.4-1-.4-1.4 0-.4.4-.4 1 0 1.4l4 4c.2.2.4.3.7.3.3 0 .5-.1.7-.3l10-10c.4-.4.4-1 0-1.4-.4-.4-1-.4-1.4 0z" fill="#00A2B8" fill-rule="nonzero"/>
-                                                    </svg>
-                                                </span>
-                                                <span>32 st. Singapore</span>
-                                            </li>
+    <section class="cta-section text-center py-5 theme-bg-dark position-relative">
+	    <div class="theme-bg-shapes-right"></div>
+	    <div class="theme-bg-shapes-left"></div>
+	    <div class="container">
+		    <h3 class="mb-2 text-white mb-3">Developer hub for developers by Developers</h3>
+		    <div class="section-intro text-white mb-3 single-col-max mx-auto"> We wanted to make Developer resources more accssiacble by best possible way. Please, help us in spreading the knowledge. Feedbacks most welcome.<br> <br>
+		    Eth address:  0x1D030De9290C328790a07EB06393E28E2F6D715D</div>
+		    <div class="pt-3 text-center">
+			    <a class="btn btn-dark" href="https://etherscan.io/address/0x1D030De9290C328790a07EB06393E28E2F6D715D">Donate<i class="fas fa-arrow-alt-circle-up ml-2"></i></a>
+		    </div>
+		     <div class="section-intro text-white mb-3 single-col-max mx-auto"> <br><b>DISCLAIMER:</b> Buidl.in is an open-source initiative by Web3 community members. Nothing contained here or at Github repository should be considered financial or investment advice - it is just for informational purposes only.</div>
+	    </div>
+    </section><!--//cta-section-->
 
-                                        </ul>
-                                    </div>
-                                    <div class="pricing-table-cta">
-                                        <a class="button button-primary button-block" href="https://docs.google.com/forms/d/e/1FAIpQLScLunQCtZiFsnw93BUZbH7dDXDWhb-zceMN2ZcV0odJm37hMw/viewform?usp=sf_link">Contact Us</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-        </main>
+               
+    
+    <footer class="footer">
 
-        <footer class="site-footer">
-            <div class="container">
-                <div class="site-footer-inner">
-                    <div class="brand footer-brand">
-                        <a href="#">
-                            <svg width="32" height="32" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
-                                <title>buidlin</title>
-                                <defs>
-                                    <radialGradient cy="0%" fx="50%" fy="0%" r="100%" id="logo-gradient-footer">
-                                        <stop stop-color="#00A2B8" offset="0%"/>
-                                        <stop stop-color="#00F9D2" offset="100%"/>
-                                    </radialGradient>
-                                </defs>
-                                <path d="M16 32C7.163 32 0 24.837 0 16S7.163 0 16 0s16 7.163 16 16-7.163 16-16 16zm0-10a6 6 0 1 0 0-12 6 6 0 0 0 0 12z" fill="url(#logo-gradient-footer)" fill-rule="evenodd"/>
-                            </svg>
-                        </a>
-                    </div>
-                    <ul class="footer-links list-reset">
-                       <!--  <li>
-                            <a href="#">Contact</a>
-                        </li> -->
-                        <li>
-                            <a href="https://github.com/buidlin">Github</a>
-                        </li>
-                        <li>
-                            <a href="https://twitter.com/buidlin">Twitter</a>
-                        </li>
-                        <li>
-                            <a href="#">Support</a>
-                        </li>
-                    </ul>
-                    <ul class="footer-social-links list-reset">
-                        <!-- <li>
-                            <a href="#">
-                                <span class="screen-reader-text">github</span>
-                                <svg width="16" height="16" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M6.023 16L6 9H3V6h3V4c0-2.7 1.672-4 4.08-4 1.153 0 2.144.086 2.433.124v2.821h-1.67c-1.31 0-1.563.623-1.563 1.536V6H13l-1 3H9.28v7H6.023z" fill="#0EB3CE"/>
-                                </svg>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                <span class="screen-reader-text">Twitter</span>
-                                <svg width="16" height="16" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M16 3c-.6.3-1.2.4-1.9.5.7-.4 1.2-1 1.4-1.8-.6.4-1.3.6-2.1.8-.6-.6-1.5-1-2.4-1-1.7 0-3.2 1.5-3.2 3.3 0 .3 0 .5.1.7-2.7-.1-5.2-1.4-6.8-3.4-.3.5-.4 1-.4 1.7 0 1.1.6 2.1 1.5 2.7-.5 0-1-.2-1.5-.4C.7 7.7 1.8 9 3.3 9.3c-.3.1-.6.1-.9.1-.2 0-.4 0-.6-.1.4 1.3 1.6 2.3 3.1 2.3-1.1.9-2.5 1.4-4.1 1.4H0c1.5.9 3.2 1.5 5 1.5 6 0 9.3-5 9.3-9.3v-.4C15 4.3 15.6 3.7 16 3z" fill="#0EB3CE"/>
-                                </svg>
-                            </a>
-                        </li>
-                        <li>
-                           
-                        </li> -->
-                    </ul>
-                    <div class="footer-copyright">&copy; 2019 buidlin, all rights reserved</div>
-                </div>
-            </div>
-        </footer>
-    </div>
-    <script src="dist/js/main.min.js"></script>
+	    <div class="footer-bottom text-center py-2">
+		    
+		    <ul class="social-list list-unstyled pb-1 mb-0">
+			    <li class="list-inline-item"><a href="#"><i class="fab fa-github fa-fw"></i></a></li> 
+	            <li class="list-inline-item"><a href="#"><i class="fab fa-twitter fa-fw"></i></a></li>
+	            <!-- <li class="list-inline-item"><a href="#"><i class="fab fa-discord fa-fw"></i></a></li> -->
+	            
+	        </ul><!--//social-list-->
+	        
+	      
+            <small class="copyright">Rustic Developer hub <i class="fas fa-heart" style="color: #fb866a;"></i> by <a class="theme-link" href="http://buidl.in" target="_blank">Developers </a> for developers</small>
+	        
+	    </div>
+	    
+    </footer>
+       
+    <!-- Javascript -->          
+    <script src="assets/plugins/jquery-3.4.1.min.js"></script>
+    <script src="assets/plugins/popper.min.js"></script>
+    <script src="assets/plugins/bootstrap/js/bootstrap.min.js"></script>  
+
 </body>
-</html>
+</html> 
+
